@@ -12,16 +12,16 @@ Unlike UIKit's imperative approach where developers explicitly instantiate and m
 
 ## Attempts / Ideas
 
-# Silly ideas / Exploratory
+### Silly ideas / Exploratory
 
 - The obvious non-working solution like using `Self.printchanges()` which only shows changes upon each re-render.
 - Injecting a tapGestureRecognizer globally as a `UIApplication` extension that detects taps no matter the view hierarchy.
   
-# Moderately Serious Ideas
+### Moderately Serious Ideas
 - Action modifier on button that publishes changes any time it is pressed. That would however violate the contraints of the project since that would require directly modifiying the button's functionality.
 - Environment and StateObserver were too invasive since it violated the constraints of set by the project instructions.
 
-# Serious Ideas
+### Serious Ideas
 - Reflection `(Mirror)` provided information about the properties contained within the View, but nothing more outside of its type and toggle state. I haven't found a working solution just yet.
 - Method swizzling was considered but a working solution didn't present itself outside of using it within the `appDelegate` (using a property wrapper) for intialization / setup. Also, if a UIKit component wrapped in a `UIViewRepresentable` which might be feasible.
 
