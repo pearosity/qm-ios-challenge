@@ -10,20 +10,17 @@ Develop a lightweight and noninvasive library for SwiftUI that facilitates the i
 
 Unlike UIKit's imperative approach where developers explicitly instantiate and modify UI elements, SwiftUI employs a declarative syntax that abstracts these details away, automatically managing UI elements based on state descriptions provided by the developer. 
 
-## Attempts / Ideas
+## Attempts
 
-### Silly ideas / Exploratory
+### Exploratory
 
-- The obvious non-working solution like using `Self.printchanges()` which only shows changes upon each re-render.
-- Injecting a tapGestureRecognizer globally as a `UIApplication` extension that detects taps no matter the view hierarchy.
+- I tried using a direct method like Self.printchanges(), which seemed straightforward but only displayed changes with each view re-render, missing real-time updates without any actionable data.
+- Global Interaction Detection: Another idea was to add a tapGestureRecognizer globally via a UIApplication extension. Explored ideas around UIApplication extensions. 
+
+### Other ideas
   
-### Moderately Serious Ideas
-- Action modifier on button that publishes changes any time it is pressed. That would however violate the contraints of the project since that would require directly modifiying the button's functionality.
-- Environment and StateObserver were too invasive since it violated the constraints of set by the project instructions.
-
-### Serious Ideas
-- Reflection `(Mirror)` provided information about the properties contained within the View, but nothing more outside of its type and toggle state. I haven't found a working solution just yet.
-- Method swizzling was considered but a working solution didn't present itself outside of using it within the `appDelegate` (using a property wrapper) for intialization / setup. Also, if a UIKit component wrapped in a `UIViewRepresentable` which might be feasible.
-
-## Conclusion
-
+- Action Modifier on Buttons: I explored using an action modifier on buttons to publish changes whenever they're pressed. However, this approach would breach the project's constraints as it involves directly altering the button's inherent behavior.
+- Using Environment and StateObserver: These were considered too intrusive and ultimately disregarded as they also conflicted with the project's guidelines.
+- Reflection with Mirror: This tool helped identify properties within the View, such as types and toggle states, but it didn’t extend beyond these basics. I’m still searching for a viable solution here.
+- Method Swizzling: This technique was on the table, especially for initializations within the appDelegate via a property wrapper. Another potential application could be in a UIKit component encapsulated within a UIViewRepresentable, though a working implementation has yet to be realized.
+- Tree observation was another thought, but not viable due to SwiftUI's declarative nature.
