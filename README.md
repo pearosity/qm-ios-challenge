@@ -14,13 +14,13 @@ Unlike UIKit's imperative approach where developers explicitly instantiate and m
 
 ### Exploratory
 
-- I tried using a direct method like Self.printchanges(), which seemed straightforward but only displayed changes with each view re-render, missing real-time updates without any actionable data.
-- Global Interaction Detection: Another idea was to add a tapGestureRecognizer globally via a UIApplication extension. Explored ideas around UIApplication extensions. 
+- I tried using a direct method like `Self.printchanges()`, which seemed straightforward but only displayed changes with each view re-render, missing real-time updates without any actionable data.
+- Global Interaction Detection: Another idea was to add a `tapGestureRecognizer` globally via a UIApplication extension. Explored ideas around UIApplication extensions. 
 
 ### Other ideas
   
 - Action Modifier on Buttons: I explored using an action modifier on buttons to publish changes whenever they're pressed. However, this approach would breach the project's constraints as it involves directly altering the button's inherent behavior.
-- Using Environment and StateObserver: These were considered too intrusive and ultimately disregarded as they also conflicted with the project's guidelines.
-- Reflection with Mirror: This tool helped identify properties within the View, such as types and toggle states, but it didn’t extend beyond these basics. I’m still searching for a viable solution here.
-- Method Swizzling: This technique was on the table, especially for initializations within the appDelegate via a property wrapper. Another potential application could be in a UIKit component encapsulated within a UIViewRepresentable, though a working implementation has yet to be realized.
+- Using `Environment` and `StateObserver`: These were considered too intrusive and ultimately disregarded as they also conflicted with the project's guidelines.
+- Reflection with `Mirror`: This tool helped identify properties within the View, such as types and toggle states, but it didn’t extend beyond these basics. I’m still searching for a viable solution here.
+- `Method Swizzling`: This technique was on the table, especially for initializations within the appDelegate via a property wrapper. Another potential application could be in a UIKit component encapsulated within a UIViewRepresentable, though a working implementation has yet to be realized.
 - Tree observation was another thought, but not viable due to SwiftUI's declarative nature.
