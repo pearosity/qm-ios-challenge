@@ -24,3 +24,10 @@ Unlike UIKit's imperative approach where developers explicitly instantiate and m
 - Reflection with `Mirror`: This tool helped identify properties within the View, such as types and toggle states, but it didn’t extend beyond these basics. I’m still searching for a viable solution here.
 - `Method Swizzling`: This technique was on the table, especially for initializations within the appDelegate via a property wrapper. Another potential application could be in a UIKit component encapsulated within a UIViewRepresentable, though a working implementation has yet to be realized.
 - Tree observation was another thought, but not viable due to SwiftUI's declarative nature.
+
+- Interestingly enough the solution could be a composition of these techniques which might include inspecting the `View.body` on load: 
+
+<img width="721" alt="Screenshot 2024-06-11 at 11 31 34 AM" src="https://github.com/pearosity/qm-ios-challenge/assets/168829978/2966602c-a28b-451b-bd4c-07e651680c2d">
+
+Determine a way to detect when changes or re-render of `ContentView` AND then inspect `View.body` after those changes have reflected -- revealing the updated values. 
+
