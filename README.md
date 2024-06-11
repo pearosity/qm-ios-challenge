@@ -31,3 +31,8 @@ Unlike UIKit's imperative approach where developers explicitly instantiate and m
 
 Determine a way to detect when changes or re-render of `ContentView` AND then inspect `View.body` after those changes have reflected -- revealing the updated values. 
 
+Which led me to consider the idea of creating an overlay of button that accesses `contentView` each time the button is pressed to reveal its re-rendered form: 
+
+![Simulator Screenshot - iPhone 15 Pro - 2024-06-11 at 12 40 00](https://github.com/pearosity/qm-ios-challenge/assets/168829978/99655101-5fbc-44c6-9f15-9b7cfdca64f7)
+
+
