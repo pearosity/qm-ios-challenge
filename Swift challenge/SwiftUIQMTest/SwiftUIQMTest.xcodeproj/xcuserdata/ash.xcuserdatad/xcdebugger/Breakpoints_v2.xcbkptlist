@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2092139A-D715-4AEB-B2E0-1538B37AED94"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.AddressBreakpoint">
+         <BreakpointContent
+            uuid = "CF9E1C50-A231-4E01-83D5-ECB96E6639AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "*0x7fff5618d4f0">
+            <Locations>
+               <Location
+                  uuid = "CF9E1C50-A231-4E01-83D5-ECB96E6639AF - 9db15958f7518d82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SwiftUI.DisplayList.ViewUpdater.Platform.updateItemView(_: inout SwiftUI.DisplayList.ViewUpdater.ViewInfo, item: SwiftUI.DisplayList.Item, state: Swift.UnsafePointer&lt;SwiftUI.DisplayList.ViewUpdater.Model.State&gt;) -&gt; ()"
+                  moduleName = "SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
