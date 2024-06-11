@@ -33,6 +33,7 @@ Determine a way to detect when changes or re-render of `ContentView` AND then in
 
 Which led me to consider the idea of creating an overlay of button that accesses `contentView` each time the button is pressed to reveal its re-rendered form: 
 
-![Simulator Screenshot - iPhone 15 Pro - 2024-06-11 at 12 40 00](https://github.com/pearosity/qm-ios-challenge/assets/168829978/99655101-5fbc-44c6-9f15-9b7cfdca64f7)
+<img width="351" alt="Screenshot 2024-06-11 at 1 01 32 PM" src="https://github.com/pearosity/qm-ios-challenge/assets/168829978/6ecdb3d7-6df9-48a6-b177-6ee8f4fad6d5">
+
 
 
